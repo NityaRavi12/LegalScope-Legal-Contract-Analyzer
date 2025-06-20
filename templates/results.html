@@ -1,0 +1,350 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis Results - Legal Contract Analyzer{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 mb-1">
+                    <i class="fas fa-file-alt text-primary me-2"></i>
+                    Analysis Results
+                </h1>
+                <p class="text-muted mb-0">File: {{ filename }}</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left me-2"></i>
+                Analyze Another Contract
+            </a>
+        </div>
+
+        <!-- Overall Summary -->
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-chart-line me-2"></i>
+                    Overall Summary
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="lead">{{ analysis.overall_summary }}</p>
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <h4 class="text-primary">{{ analysis.total_clauses }}</h4>
+                            <small class="text-muted">Clauses Found</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <h4 class="text-warning">{{ analysis.risk_count }}</h4>
+                            <small class="text-muted">Risks Detected</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <h4 class="text-success">{{ analysis.clauses|length }}</h4>
+                            <small class="text-muted">Summarized</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <h4 class="text-info">{{ analysis.filename|length }}</h4>
+                            <small class="text-muted">Characters</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Analysis -->
+        {% if analysis.risks %}
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Risk Analysis
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% for risk in analysis.risks %}
+                    <div class="col-md-6 mb-3">
+                        <div class="card border-{{ 'danger' if risk.severity == 'high' else 'warning' if risk.severity == 'medium' else 'info' }}">
+                            <div class="card-header bg-{{ 'danger' if risk.severity == 'high' else 'warning' if risk.severity == 'medium' else 'info' }} text-white">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-white text-{{ 'danger' if risk.severity == 'high' else 'warning' if risk.severity == 'medium' else 'info' }}">
+                                        {{ risk.severity|title }}
+                                    </span>
+                                    <small>{{ risk.category|replace('_', ' ')|title }}</small>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{ risk.text[:200] }}{% if risk.text|length > 200 %}...{% endif %}</p>
+                                {% if risk.confidence %}
+                                <small class="text-muted">Confidence: {{ (risk.confidence * 100)|round(1) }}%</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Extracted Clauses -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-list-alt me-2"></i>
+                    Extracted Clauses
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if analysis.clauses %}
+                <div class="accordion" id="clausesAccordion">
+                    {% for clause in analysis.clauses %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading{{ loop.index }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}">
+                                <div class="d-flex justify-content-between align-items-center w-100 me-3">
+                                    <span>
+                                        <i class="fas fa-gavel me-2 text-primary"></i>
+                                        {{ clause.type }}
+                                    </span>
+                                    {% if clause.confidence %}
+                                    <span class="badge bg-primary">{{ (clause.confidence * 100)|round(1) }}%</span>
+                                    {% endif %}
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse{{ loop.index }}" class="accordion-collapse collapse" data-bs-parent="#clausesAccordion">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="text-muted">Original Text</h6>
+                                        <div class="bg-light p-3 rounded" style="max-height: 200px; overflow-y: auto;">
+                                            <small>{{ clause.text }}</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-muted">Summary</h6>
+                                        <div class="bg-primary bg-opacity-10 p-3 rounded">
+                                            <p class="mb-0">{{ clause.summary }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center py-4">
+                    <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                    <p class="text-muted">No clauses were extracted from this document.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- LLM Analysis Insights -->
+        {% if analysis.llm_analysis and analysis.llm_analysis.legal_insights %}
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-brain me-2"></i>
+                    AI Legal Insights
+                </h5>
+            </div>
+            <div class="card-body">
+                <!-- Legal Insights -->
+                {% if analysis.llm_analysis.legal_insights %}
+                <div class="mb-4">
+                    <h6 class="text-info">
+                        <i class="fas fa-gavel me-2"></i>
+                        Legal Analysis
+                    </h6>
+                    <div class="bg-light p-3 rounded">
+                        <p class="mb-0">{{ analysis.llm_analysis.legal_insights }}</p>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Recommendations -->
+                {% if analysis.llm_analysis.recommendations %}
+                <div class="mb-4">
+                    <h6 class="text-success">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        Recommendations
+                    </h6>
+                    <ul class="list-group list-group-flush">
+                        {% for recommendation in analysis.llm_analysis.recommendations %}
+                        <li class="list-group-item">
+                            <i class="fas fa-arrow-right text-primary me-2"></i>
+                            {{ recommendation }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                <!-- Risk Explanations -->
+                {% if analysis.llm_analysis.risk_explanations %}
+                <div class="mb-4">
+                    <h6 class="text-warning">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Risk Explanations
+                    </h6>
+                    <div class="row">
+                        {% for explanation in analysis.llm_analysis.risk_explanations %}
+                        <div class="col-md-6 mb-3">
+                            <div class="card border-warning">
+                                <div class="card-header bg-warning text-dark">
+                                    <strong>{{ explanation.risk_id|replace('_', ' ')|title }}</strong>
+                                    <span class="badge bg-{{ 'danger' if explanation.severity == 'high' else 'warning' if explanation.severity == 'medium' else 'info' }} float-end">
+                                        {{ explanation.severity|title }}
+                                    </span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">{{ explanation.explanation[:200] }}{% if explanation.explanation|length > 200 %}...{% endif %}</p>
+                                    {% if explanation.mitigation_suggestions %}
+                                    <small class="text-muted">
+                                        <strong>Mitigation:</strong> {{ explanation.mitigation_suggestions[0] }}
+                                    </small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Compliance Check -->
+                {% if analysis.llm_analysis.compliance_check %}
+                <div class="mb-4">
+                    <h6 class="text-primary">
+                        <i class="fas fa-shield-alt me-2"></i>
+                        Compliance Assessment
+                    </h6>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="bg-light p-3 rounded">
+                                <p class="mb-0">{{ analysis.llm_analysis.compliance_check.assessment[:300] }}{% if analysis.llm_analysis.compliance_check.assessment|length > 300 %}...{% endif %}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <h4 class="text-{{ 'success' if analysis.llm_analysis.compliance_check.compliance_score > 0.7 else 'warning' if analysis.llm_analysis.compliance_check.compliance_score > 0.4 else 'danger' }}">
+                                    {{ (analysis.llm_analysis.compliance_check.compliance_score * 100)|round(0) }}%
+                                </h4>
+                                <small class="text-muted">Compliance Score</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Action Buttons -->
+        <div class="text-center mt-4">
+            <button class="btn btn-primary me-2" onclick="window.print()">
+                <i class="fas fa-print me-2"></i>
+                Print Report
+            </button>
+            <button class="btn btn-outline-primary me-2" onclick="downloadReport()">
+                <i class="fas fa-download me-2"></i>
+                Download Report
+            </button>
+            <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                <i class="fas fa-plus me-2"></i>
+                Analyze Another
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+/* eslint-disable */
+/* eslint-disable-next-line */
+// Pre-generate report data
+const reportData = {
+    filename: '{{ filename }}',
+    overallSummary: '{{ analysis.overall_summary }}',
+    totalClauses: {{ analysis.total_clauses }},
+    riskCount: {{ analysis.risk_count }},
+    risks: [
+        {% if analysis.risks %}
+        {% for risk in analysis.risks %}
+        {
+            severity: '{{ risk.severity|title }}',
+            category: '{{ risk.category|replace('_', ' ')|title }}',
+            text: '{{ risk.text[:100] }}...'
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+        {% endif %}
+    ],
+    clauses: [
+        {% for clause in analysis.clauses %}
+        {
+            type: '{{ clause.type }}',
+            summary: '{{ clause.summary }}',
+            text: '{{ clause.text[:200] }}...'
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+};
+
+function downloadReport() {
+    let report = 'Legal Contract Analyzer - Analysis Report\n';
+    report += '==========================================\n\n';
+    report += 'File: ' + reportData.filename + '\n';
+    report += 'Date: ' + new Date().toLocaleDateString() + '\n\n';
+    
+    report += 'OVERALL SUMMARY\n';
+    report += '---------------\n';
+    report += reportData.overallSummary + '\n\n';
+    
+    report += 'STATISTICS\n';
+    report += '----------\n';
+    report += 'Total Clauses: ' + reportData.totalClauses + '\n';
+    report += 'Risks Detected: ' + reportData.riskCount + '\n\n';
+    
+    if (reportData.risks.length > 0) {
+        report += 'RISK ANALYSIS\n';
+        report += '-------------\n';
+        reportData.risks.forEach(risk => {
+            report += risk.severity + ' Risk: ' + risk.category + '\n';
+            report += risk.text + '\n\n';
+        });
+    }
+    
+    report += 'EXTRACTED CLAUSES\n';
+    report += '-----------------\n';
+    reportData.clauses.forEach(clause => {
+        report += clause.type + ':\n';
+        report += 'Summary: ' + clause.summary + '\n';
+        report += 'Original: ' + clause.text + '\n\n';
+    });
+    
+    // Create and download file
+    const blob = new Blob([report], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'contract-analysis-report.txt';
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+{% endblock %} 

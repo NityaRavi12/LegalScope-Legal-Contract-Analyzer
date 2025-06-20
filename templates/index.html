@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+
+{% block title %}Legal Contract Analyzer - Home{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <!-- Hero Section -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary mb-3">
+                <i class="fas fa-balance-scale me-3"></i>
+                Legal Contract Analyzer
+            </h1>
+            <p class="lead text-muted mb-4">
+                Upload your legal contracts and get instant AI-powered analysis, 
+                clause extraction, and risk detection in plain language.
+            </p>
+        </div>
+
+        <!-- Upload Card -->
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <i class="fas fa-file-upload fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">Upload Your Contract</h3>
+                    <p class="text-muted">Supported formats: PDF, DOCX, DOC, TXT (Max 16MB)</p>
+                </div>
+
+                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" id="uploadForm">
+                    <div class="upload-area mb-4" id="uploadArea">
+                        <div class="upload-content text-center">
+                            <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-3"></i>
+                            <p class="mb-2">Drag and drop your contract here</p>
+                            <p class="text-muted small">or</p>
+                            <label for="fileInput" class="btn btn-primary" style="cursor: pointer;">
+                                <i class="fas fa-folder-open me-2"></i>
+                                Choose File
+                            </label>
+                            <input type="file" id="fileInput" name="file" accept=".pdf,.docx,.doc,.txt" style="display: none;" required>
+                        </div>
+                    </div>
+
+                    <div class="selected-file mb-4 d-none" id="selectedFile">
+                        <div class="d-flex align-items-center p-3 bg-light rounded">
+                            <i class="fas fa-file-alt fa-2x text-primary me-3"></i>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1" id="fileName">filename.pdf</h6>
+                                <small class="text-muted" id="fileSize">0 KB</small>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-danger" id="removeFile">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5" id="analyzeBtn" disabled>
+                            <i class="fas fa-search me-2"></i>
+                            Analyze Contract
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Loading Spinner -->
+                <div class="text-center mt-4 d-none" id="loadingSpinner">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Analyzing...</span>
+                    </div>
+                    <p class="mt-2 text-muted">Analyzing your contract...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <i class="fas fa-search fa-2x text-primary"></i>
+                    </div>
+                    <h5>Clause Extraction</h5>
+                    <p class="text-muted">Automatically identify and extract key contract clauses like termination, confidentiality, and liability.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <i class="fas fa-comments fa-2x text-success"></i>
+                    </div>
+                    <h5>Smart Summaries</h5>
+                    <p class="text-muted">Get plain-language summaries of complex legal terms and conditions.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <i class="fas fa-exclamation-triangle fa-2x text-warning"></i>
+                    </div>
+                    <h5>Risk Detection</h5>
+                    <p class="text-muted">Identify potential risks like auto-renewals, penalty fees, and unusual terms.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="card mt-5 border-0 bg-light">
+            <div class="card-body p-4">
+                <h4 class="text-center mb-4">How It Works</h4>
+                <div class="row">
+                    <div class="col-md-3 text-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 40px; height: 40px;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <h6>Upload</h6>
+                        <small class="text-muted">Upload your contract file</small>
+                    </div>
+                    <div class="col-md-3 text-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 40px; height: 40px;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <h6>Analyze</h6>
+                        <small class="text-muted">AI processes your document</small>
+                    </div>
+                    <div class="col-md-3 text-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 40px; height: 40px;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <h6>Extract</h6>
+                        <small class="text-muted">Key clauses are identified</small>
+                    </div>
+                    <div class="col-md-3 text-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 40px; height: 40px;">
+                            <span class="fw-bold">4</span>
+                        </div>
+                        <h6>Review</h6>
+                        <small class="text-muted">Get insights and summaries</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const selectedFile = document.getElementById('selectedFile');
+    const fileName = document.getElementById('fileName');
+    const fileSize = document.getElementById('fileSize');
+    const removeFile = document.getElementById('removeFile');
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const uploadForm = document.getElementById('uploadForm');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+
+    // Drag and drop functionality
+    uploadArea.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        uploadArea.classList.add('border-primary');
+    });
+
+    uploadArea.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        uploadArea.classList.remove('border-primary');
+    });
+
+    uploadArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        uploadArea.classList.remove('border-primary');
+        
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            handleFileSelect(files[0]);
+        }
+    });
+
+    // Click on upload area to select file
+    uploadArea.addEventListener('click', function(e) {
+        // Don't trigger if clicking on the label button
+        if (e.target.tagName !== 'LABEL' && !e.target.closest('label')) {
+            fileInput.click();
+        }
+    });
+
+    // File input change
+    fileInput.addEventListener('change', function(e) {
+        if (e.target.files.length > 0) {
+            handleFileSelect(e.target.files[0]);
+        }
+    });
+
+    // Remove file
+    removeFile.addEventListener('click', function() {
+        fileInput.value = '';
+        selectedFile.classList.add('d-none');
+        analyzeBtn.disabled = true;
+    });
+
+    // Handle file selection
+    function handleFileSelect(file) {
+        // Validate file type
+        const allowedTypes = ['.pdf', '.docx', '.doc', '.txt'];
+        const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+        
+        if (!allowedTypes.includes(fileExtension)) {
+            alert('Please select a valid file type: PDF, DOCX, DOC, or TXT');
+            return;
+        }
+
+        // Validate file size (16MB)
+        if (file.size > 16 * 1024 * 1024) {
+            alert('File size must be less than 16MB');
+            return;
+        }
+
+        // Display file info
+        fileName.textContent = file.name;
+        fileSize.textContent = formatFileSize(file.size);
+        selectedFile.classList.remove('d-none');
+        analyzeBtn.disabled = false;
+    }
+
+    // Format file size
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    // Form submission
+    uploadForm.addEventListener('submit', function(e) {
+        if (!fileInput.files.length) {
+            e.preventDefault();
+            alert('Please select a file to upload');
+            return;
+        }
+
+        // Show loading spinner
+        loadingSpinner.classList.remove('d-none');
+        analyzeBtn.disabled = true;
+    });
+});
+</script>
+{% endblock %} 
