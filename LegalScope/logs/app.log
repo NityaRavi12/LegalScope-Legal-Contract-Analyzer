@@ -1,0 +1,146 @@
+2025-06-19 17:43:23,461 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 17:43:28,041 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.150:5000
+2025-06-19 17:43:28,042 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 17:43:28,067 - werkzeug - INFO -  * Restarting with stat
+2025-06-19 17:46:19,075 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 17:46:22,880 - werkzeug - WARNING -  * Debugger is active!
+2025-06-19 17:46:22,936 - werkzeug - INFO -  * Debugger PIN: 457-976-126
+2025-06-19 17:53:14,391 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Nitya\\Desktop\\LegalScope\\utils\\llm_analyzer.py', reloading
+2025-06-19 17:53:19,055 - werkzeug - INFO -  * Restarting with stat
+2025-06-19 17:56:30,451 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 17:56:35,632 - werkzeug - WARNING -  * Debugger is active!
+2025-06-19 17:56:35,694 - werkzeug - INFO -  * Debugger PIN: 457-976-126
+2025-06-19 17:57:34,742 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 17:57:34] "GET / HTTP/1.1" 200 -
+2025-06-19 17:57:35,454 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 17:57:35] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-06-19 17:57:35,466 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 17:57:35] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-19 17:57:36,690 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 17:57:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 17:57:36,694 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 17:57:36] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 18:08:02,204 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:02] "GET / HTTP/1.1" 200 -
+2025-06-19 18:08:02,336 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 18:08:02,336 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-19 18:08:03,217 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:03] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 18:08:11,150 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:11] "GET / HTTP/1.1" 200 -
+2025-06-19 18:08:11,211 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-19 18:08:11,415 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 18:08:11,867 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:08:11] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 18:09:06,176 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:09:06] "GET / HTTP/1.1" 200 -
+2025-06-19 18:09:06,543 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:09:06] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-19 18:09:06,560 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:09:06] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-06-19 18:09:07,938 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:09:07] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 18:09:07,960 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:09:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-19 18:51:03,006 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:51:03] "GET / HTTP/1.1" 200 -
+2025-06-19 18:51:03,082 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:51:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-19 18:51:03,095 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:51:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 18:51:04,776 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:51:04] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 18:52:32,439 - __main__ - INFO - File uploaded: SERVICE_AGREEMENT.pdf
+2025-06-19 18:52:32,443 - __main__ - INFO - Extracting text from document...
+2025-06-19 18:52:33,330 - __main__ - INFO - Extracting clauses...
+2025-06-19 18:52:33,349 - utils.clause_extractor - ERROR - Error extracting clauses: 'NoneType' object has no attribute 'strip'
+2025-06-19 18:52:33,358 - __main__ - INFO - Summarizing clauses...
+2025-06-19 18:52:33,361 - __main__ - INFO - Detecting risks...
+2025-06-19 18:53:30,433 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:53:30] "POST /upload HTTP/1.1" 200 -
+2025-06-19 18:53:30,791 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:53:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 18:53:30,791 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:53:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-19 18:53:31,096 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:53:31] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 18:57:21,384 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:57:21] "GET / HTTP/1.1" 200 -
+2025-06-19 18:57:21,456 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:57:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-19 18:57:21,468 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:57:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 18:57:21,706 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:57:21] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 18:57:48,636 - __main__ - INFO - File uploaded: SOFTWARE_DEVELOPMENT_AGREEMENT.pdf
+2025-06-19 18:57:48,637 - __main__ - INFO - Extracting text from document...
+2025-06-19 18:57:49,283 - __main__ - INFO - Extracting clauses...
+2025-06-19 18:57:49,285 - utils.clause_extractor - ERROR - Error extracting clauses: 'NoneType' object has no attribute 'strip'
+2025-06-19 18:57:49,295 - __main__ - INFO - Summarizing clauses...
+2025-06-19 18:57:49,296 - __main__ - INFO - Detecting risks...
+2025-06-19 18:58:29,811 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:58:29] "POST /upload HTTP/1.1" 200 -
+2025-06-19 18:58:30,064 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:58:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-19 18:58:30,078 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:58:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 18:58:30,324 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 18:58:30] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 19:01:11,283 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Nitya\\Desktop\\LegalScope\\utils\\clause_extractor.py', reloading
+2025-06-19 19:01:20,203 - werkzeug - INFO -  * Restarting with stat
+2025-06-19 19:04:23,277 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 19:04:33,440 - werkzeug - WARNING -  * Debugger is active!
+2025-06-19 19:04:33,527 - werkzeug - INFO -  * Debugger PIN: 457-976-126
+2025-06-19 19:10:34,468 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:10:34] "GET / HTTP/1.1" 200 -
+2025-06-19 19:10:35,237 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:10:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 19:10:35,279 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:10:35] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-19 19:10:36,496 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:10:36] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 19:10:54,280 - __main__ - INFO - File uploaded: SOFTWARE_DEVELOPMENT_AGREEMENT.pdf
+2025-06-19 19:10:54,281 - __main__ - INFO - Extracting text from document...
+2025-06-19 19:10:56,447 - __main__ - INFO - Extracting clauses...
+2025-06-19 19:10:56,464 - utils.clause_extractor - ERROR - Error extracting clauses: 'NoneType' object has no attribute 'strip'
+2025-06-19 19:10:56,465 - __main__ - INFO - Summarizing clauses...
+2025-06-19 19:10:56,465 - __main__ - INFO - Detecting risks...
+2025-06-19 19:12:11,956 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:12:11] "POST /upload HTTP/1.1" 200 -
+2025-06-19 19:12:12,403 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:12:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-19 19:12:12,408 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:12:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-19 19:12:12,717 - werkzeug - INFO - 127.0.0.1 - - [19/Jun/2025 19:12:12] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-19 19:20:38,780 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Nitya\\Desktop\\LegalScope\\utils\\text_extractor.py', reloading
+2025-06-19 19:20:48,645 - werkzeug - INFO -  * Restarting with stat
+2025-06-19 19:22:29,972 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 19:22:35,493 - werkzeug - WARNING -  * Debugger is active!
+2025-06-19 19:22:35,609 - werkzeug - INFO -  * Debugger PIN: 457-976-126
+2025-06-19 19:24:11,594 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Nitya\\Desktop\\LegalScope\\utils\\clause_extractor.py', reloading
+2025-06-19 19:24:19,979 - werkzeug - INFO -  * Restarting with stat
+2025-06-19 19:25:45,482 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 19:25:50,137 - werkzeug - WARNING -  * Debugger is active!
+2025-06-19 19:25:50,204 - werkzeug - INFO -  * Debugger PIN: 457-976-126
+2025-06-20 00:54:19,554 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Nitya\\Desktop\\LegalScope\\utils\\clause_extractor.py', reloading
+2025-06-20 00:54:25,674 - werkzeug - INFO -  * Restarting with stat
+2025-06-20 00:57:37,076 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-20 00:57:51,272 - werkzeug - WARNING -  * Debugger is active!
+2025-06-20 00:57:51,368 - werkzeug - INFO -  * Debugger PIN: 457-976-126
+2025-06-20 01:12:03,402 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:12:03] "GET / HTTP/1.1" 200 -
+2025-06-20 01:12:03,705 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:12:03] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-20 01:12:03,754 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:12:03] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-06-20 01:12:04,405 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:12:04] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-20 01:12:04,406 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:12:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-20 01:12:29,683 - __main__ - INFO - File uploaded: SOFTWARE_DEVELOPMENT_AGREEMENT.pdf
+2025-06-20 01:12:29,708 - __main__ - INFO - Extracting text from document...
+2025-06-20 01:12:30,041 - utils.text_extractor - INFO - PDF opened successfully. Number of pages: 4
+2025-06-20 01:12:30,991 - utils.text_extractor - INFO - Page 1: Extracted 983 characters
+2025-06-20 01:12:31,333 - utils.text_extractor - INFO - Page 2: Extracted 1455 characters
+2025-06-20 01:12:31,640 - utils.text_extractor - INFO - Page 3: Extracted 1396 characters
+2025-06-20 01:12:31,690 - utils.text_extractor - INFO - Page 4: Extracted 109 characters
+2025-06-20 01:12:31,707 - utils.text_extractor - INFO - PDF extraction completed. Raw text: 3947 chars, Cleaned text: 3946 chars
+2025-06-20 01:12:31,733 - __main__ - INFO - Text extraction completed. Text length: 3946
+2025-06-20 01:12:31,734 - __main__ - INFO - Extracting clauses...
+2025-06-20 01:12:31,782 - utils.clause_extractor - INFO - Segmented text into 12 potential clauses
+2025-06-20 01:17:06,734 - __main__ - INFO - Clause extraction completed. Found 11 clauses
+2025-06-20 01:17:06,735 - __main__ - INFO - Summarizing clauses...
+2025-06-20 01:19:28,722 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:19:28] "GET / HTTP/1.1" 200 -
+2025-06-20 01:19:28,929 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:19:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-20 01:19:28,930 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:19:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-20 01:19:30,160 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:19:30] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-20 01:19:42,855 - __main__ - INFO - File uploaded: SOFTWARE_DEVELOPMENT_AGREEMENT.pdf
+2025-06-20 01:19:42,855 - __main__ - INFO - Extracting text from document...
+2025-06-20 01:19:43,072 - utils.text_extractor - INFO - PDF opened successfully. Number of pages: 4
+2025-06-20 01:19:43,477 - utils.text_extractor - INFO - Page 1: Extracted 983 characters
+2025-06-20 01:19:48,835 - utils.text_extractor - INFO - Page 2: Extracted 1455 characters
+2025-06-20 01:19:49,203 - utils.text_extractor - INFO - Page 3: Extracted 1396 characters
+2025-06-20 01:19:49,303 - utils.text_extractor - INFO - Page 4: Extracted 109 characters
+2025-06-20 01:19:49,321 - utils.text_extractor - INFO - PDF extraction completed. Raw text: 3947 chars, Cleaned text: 3946 chars
+2025-06-20 01:19:49,322 - __main__ - INFO - Text extraction completed. Text length: 3946
+2025-06-20 01:19:49,322 - __main__ - INFO - Extracting clauses...
+2025-06-20 01:19:49,325 - utils.clause_extractor - INFO - Segmented text into 12 potential clauses
+2025-06-20 01:20:17,751 - __main__ - INFO - Detecting risks...
+2025-06-20 01:20:48,969 - __main__ - INFO - Risk detection completed. Found 3 risks
+2025-06-20 01:22:00,671 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:22:00] "POST /upload HTTP/1.1" 200 -
+2025-06-20 01:22:01,367 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:22:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-20 01:22:01,377 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:22:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-20 01:22:01,810 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:22:01] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-20 01:26:26,742 - __main__ - INFO - Clause extraction completed. Found 11 clauses
+2025-06-20 01:26:26,752 - __main__ - INFO - Summarizing clauses...
+2025-06-20 01:28:59,228 - __main__ - INFO - Detecting risks...
+2025-06-20 01:29:06,780 - __main__ - INFO - Risk detection completed. Found 3 risks
+2025-06-20 01:29:30,916 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:29:30] "POST /upload HTTP/1.1" 200 -
+2025-06-20 01:29:31,610 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:29:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-20 01:29:31,610 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:29:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-20 01:29:32,366 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 01:29:32] "[33mGET /sw.js HTTP/1.1[0m" 404 -
+2025-06-20 13:28:08,689 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 13:28:08] "GET / HTTP/1.1" 200 -
+2025-06-20 13:28:08,923 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 13:28:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-20 13:28:09,319 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 13:28:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-06-20 13:28:09,725 - werkzeug - INFO - 127.0.0.1 - - [20/Jun/2025 13:28:09] "[33mGET /sw.js HTTP/1.1[0m" 404 -

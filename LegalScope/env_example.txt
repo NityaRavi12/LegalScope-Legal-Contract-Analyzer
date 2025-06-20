@@ -1,0 +1,36 @@
+# Flask Configuration
+FLASK_APP=app.py
+FLASK_ENV=development
+SECRET_KEY=your-secret-key-here
+
+# OpenAI API Configuration (Optional - for advanced analysis)
+OPENAI_API_KEY=your-openai-api-key-here
+
+# Model Configuration
+MODEL_CACHE_DIR=./models/cache
+UPLOAD_FOLDER=./uploads
+MAX_CONTENT_LENGTH=16777216  # 16MB max file size
+
+# Database Configuration (if needed later)
+DATABASE_URL=sqlite:///legal_analyzer.db
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FILE=./logs/app.log
+
+# Security Configuration
+ALLOWED_EXTENSIONS=pdf,docx,doc,txt
+
+# LLM Integration (Optional)
+# Set to 'true' to enable LLM analysis
+ENABLE_LLM=false
+
+# LLM Provider: 'openai' or 'anthropic'
+LLM_PROVIDER=openai
+
+# LLM Model: 'gpt-4', 'gpt-3.5-turbo', 'claude-3-sonnet-20240229', etc.
+LLM_MODEL=gpt-4
+
+# API Keys (only needed if ENABLE_LLM=true)
+OPENAI_API_KEY=your_openai_api_key_here
+ANTHROPIC_API_KEY=your_anthropic_api_key_here 

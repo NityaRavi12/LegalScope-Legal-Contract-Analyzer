@@ -1,0 +1,83 @@
+SERVICE AGREEMENT
+
+This Service Agreement (the "Agreement") is entered into as of January 1, 2024, by and between:
+
+TECHNOLOGY SOLUTIONS INC., a Delaware corporation ("Provider")
+and
+STARTUP VENTURES LLC, a California limited liability company ("Client")
+
+1. SERVICES
+
+Provider shall provide software development and consulting services to Client as described in the attached Statement of Work. Provider will use reasonable efforts to complete the services in a professional manner.
+
+2. PAYMENT TERMS
+
+Client shall pay Provider $10,000 per month for services rendered. Payment is due within 30 days of invoice date. Late payments shall incur a penalty fee of 1.5% per month. All payments are non-refundable.
+
+3. TERM AND TERMINATION
+
+This Agreement shall commence on the effective date and continue for a period of 12 months. The Agreement shall automatically renew for successive 12-month periods unless either party provides written notice of termination at least 60 days prior to the end of the current term. Early termination by Client shall result in a termination fee equal to 3 months of service fees.
+
+4. CONFIDENTIALITY
+
+Each party acknowledges that it may have access to confidential information of the other party. Each party agrees to maintain the confidentiality of such information and not to disclose it to any third party without prior written consent. This obligation shall survive termination of the Agreement for a period of 5 years.
+
+5. INTELLECTUAL PROPERTY
+
+All intellectual property created by Provider in the course of providing services shall remain the exclusive property of Provider unless otherwise specified in writing. Client shall have a non-exclusive license to use such intellectual property solely for its internal business purposes.
+
+6. LIABILITY
+
+Provider's total liability under this Agreement shall not exceed the total amount paid by Client in the 12 months preceding the claim. In no event shall Provider be liable for any indirect, incidental, special, or consequential damages, including but not limited to lost profits or data.
+
+7. INDEMNIFICATION
+
+Client shall indemnify and hold harmless Provider from and against any claims, damages, or expenses arising from Client's use of the services or breach of this Agreement.
+
+8. FORCE MAJEURE
+
+Neither party shall be liable for any delay or failure to perform due to circumstances beyond its reasonable control, including but not limited to acts of God, war, terrorism, or government action.
+
+9. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of California. Any disputes shall be resolved through binding arbitration in San Francisco, California.
+
+10. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire understanding between the parties and supersedes all prior agreements or understandings, whether written or oral.
+
+11. AMENDMENTS
+
+This Agreement may only be amended by a written instrument signed by both parties.
+
+12. NOTICES
+
+All notices shall be in writing and delivered to the addresses specified above or to such other address as either party may designate in writing.
+
+13. SEVERABILITY
+
+If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+14. WAIVER
+
+No waiver of any provision of this Agreement shall be effective unless in writing and signed by the party against whom enforcement is sought.
+
+15. SURVIVAL
+
+Sections 4, 5, 6, 7, and 9 shall survive termination of this Agreement.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first above written.
+
+TECHNOLOGY SOLUTIONS INC.
+
+By: _________________________
+Name: John Smith
+Title: CEO
+Date: January 1, 2024
+
+STARTUP VENTURES LLC
+
+By: _________________________
+Name: Jane Doe
+Title: Founder
+Date: January 1, 2024 

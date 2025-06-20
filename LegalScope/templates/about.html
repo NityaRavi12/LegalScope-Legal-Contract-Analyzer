@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+
+{% block title %}About - Legal Contract Analyzer{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <!-- About Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-primary mb-3">
+                <i class="fas fa-info-circle me-3"></i>
+                About Legal Contract Analyzer
+            </h1>
+            <p class="lead text-muted">
+                An AI-powered tool designed to simplify complex legal contracts and help you understand your obligations and risks.
+            </p>
+        </div>
+
+        <!-- What It Does -->
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-cogs me-2"></i>
+                    What It Does
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-search text-primary fa-2x me-3"></i>
+                            </div>
+                            <div>
+                                <h5>Clause Extraction</h5>
+                                <p class="text-muted">Automatically identifies and extracts key contract clauses like termination, confidentiality, liability, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-comments text-success fa-2x me-3"></i>
+                            </div>
+                            <div>
+                                <h5>Smart Summarization</h5>
+                                <p class="text-muted">Converts complex legal language into plain, easy-to-understand summaries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-exclamation-triangle text-warning fa-2x me-3"></i>
+                            </div>
+                            <div>
+                                <h5>Risk Detection</h5>
+                                <p class="text-muted">Flags potentially risky terms like auto-renewals, penalty fees, and unusual conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chart-bar text-info fa-2x me-3"></i>
+                            </div>
+                            <div>
+                                <h5>Interactive Analysis</h5>
+                                <p class="text-muted">Presents insights through an intuitive web interface with detailed breakdowns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use Case -->
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    Use Case Scenario
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h5>Startup Founder's Challenge</h5>
+                        <p>A startup founder receives a lengthy vendor contract filled with dense legal jargon. Without a legal background, they're unsure about:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Key obligations and deadlines</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Potential risks and penalties</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Hidden auto-renewal clauses</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Liability and indemnification terms</li>
+                        </ul>
+                        <p class="mb-0"><strong>Solution:</strong> By uploading the contract into the Legal Contract Analyzer, they get clear summaries, risk flags, and actionable insights to make informed decisions.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-rocket fa-4x text-success mb-3"></i>
+                        <p class="text-muted">Save time and reduce risk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">
+                    <i class="fas fa-code me-2"></i>
+                    Technology Stack
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Backend & AI</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fab fa-python text-primary me-2"></i>Python & Flask</li>
+                            <li><i class="fas fa-brain text-success me-2"></i>Hugging Face Transformers</li>
+                            <li><i class="fas fa-file-pdf text-danger me-2"></i>PDF & DOCX Processing</li>
+                            <li><i class="fas fa-language text-warning me-2"></i>NLP & Text Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Frontend & Deployment</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fab fa-html5 text-orange me-2"></i>HTML5 & CSS3</li>
+                            <li><i class="fab fa-js text-warning me-2"></i>JavaScript & Bootstrap</li>
+                            <li><i class="fas fa-cloud text-info me-2"></i>Cloud Ready (Heroku/AWS)</li>
+                            <li><i class="fas fa-shield-alt text-success me-2"></i>Secure & Confidential</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-header bg-warning text-dark">
+                <h4 class="mb-0">
+                    <i class="fas fa-star me-2"></i>
+                    Key Features
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-upload fa-2x text-primary"></i>
+                            </div>
+                            <h6>Easy Upload</h6>
+                            <small class="text-muted">Support for PDF, DOCX, DOC, and TXT files</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-bolt fa-2x text-success"></i>
+                            </div>
+                            <h6>Fast Processing</h6>
+                            <small class="text-muted">AI-powered analysis in seconds</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-eye fa-2x text-info"></i>
+                            </div>
+                            <h6>Clear Insights</h6>
+                            <small class="text-muted">Plain language explanations</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="alert alert-warning" role="alert">
+            <h5 class="alert-heading">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                Important Disclaimer
+            </h5>
+            <p class="mb-0">
+                This tool is for educational and informational purposes only. It should not be considered as legal advice. 
+                Always consult with a qualified legal professional for legal matters. The analysis provided is based on 
+                AI algorithms and may not capture all nuances of legal documents.
+            </p>
+        </div>
+
+        <!-- Get Started -->
+        <div class="text-center mt-5">
+            <h4 class="mb-3">Ready to analyze your contracts?</h4>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-play me-2"></i>
+                Get Started Now
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

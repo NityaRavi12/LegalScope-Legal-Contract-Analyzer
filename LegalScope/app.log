@@ -1,0 +1,18 @@
+2025-06-19 00:12:53,806 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-19 00:14:15,435 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-19 00:15:48,906 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 00:15:49,246 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-19 00:16:02,269 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.150:5000
+2025-06-19 00:16:02,272 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 00:16:02,278 - werkzeug - INFO -  * Restarting with stat
+2025-06-19 00:18:05,461 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 00:18:32,382 - werkzeug - WARNING -  * Debugger is active!
+2025-06-19 00:18:32,437 - werkzeug - INFO -  * Debugger PIN: 457-976-126
+2025-06-19 00:35:00,675 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Nitya\\Desktop\\LegalScope\\utils\\clause_extractor.py', reloading
+2025-06-19 00:35:06,522 - werkzeug - INFO -  * Restarting with stat
+2025-06-19 00:37:12,038 - utils.summarizer - INFO - Summarization model loaded successfully
+2025-06-19 00:37:18,569 - werkzeug - WARNING -  * Debugger is active!
+2025-06-19 00:37:18,639 - werkzeug - INFO -  * Debugger PIN: 457-976-126
